@@ -1,11 +1,13 @@
 package Action;
+
 import gui.Gui;
 
-public class Main {
-
+public class Main
+{
     public static void main(String[] args)
     {
         Gui g = new Gui();
         g.create();
+        System.out.println("Test");
     }
 }
