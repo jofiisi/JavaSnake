@@ -19,12 +19,12 @@ public class Draw extends JLabel
         {
             for (int y = 0; y < 16; y++)
             {
-                g.drawRect(x*32 + Gui.xoff, y * 32 + Gui.yofff, 32 , 32);
+                g.drawRect(x*32 + Gui.xoff, y * 32 + Gui.yoff, 32 , 32);
             }
         }
 
         g.setColor(Color.BLACK);
-        g.drawRect(Gui.xoff, Gui.yofff, 512, 512);
+        g.drawRect(Gui.xoff, Gui.yoff, 512, 512);
 
         repaint();
     }

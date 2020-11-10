@@ -1,13 +1,13 @@
 package gui;
 import javax.swing.*;
-
+import Action.KeyHandler;
 public class Gui
 {
     JFrame jf;
     Draw d;
 
     public static int width = 800, height = 600;
-    public static int xoff = 130, yofff = 20;
+    public static int xoff = 130, yoff = 20;
 
     public void create()
     {
@@ -17,6 +17,7 @@ public class Gui
         jf.setLocationRelativeTo(null);
         jf.setLayout(null);
         jf.setResizable(false);
+        jf.addKeyListener(new KeyHandler());
 
         d = new Draw();
         d.setBounds(0, 0 , width, height);
