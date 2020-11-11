@@ -11,6 +11,6 @@ public class Main
         GameCLock gc = new GameCLock();
         g.create();
         gc.start();
-        System.out.print("Test");
+        System.out.print("GithubTest");
     }
 }
