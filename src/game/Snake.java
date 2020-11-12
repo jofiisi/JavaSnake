@@ -22,7 +22,43 @@ public class Snake
     }
     public static void move()
     {
+        if(tails.size() >= 2)
+        {
+            for(int i = tails.size()-1; i >=1;i--)
+            {
+                if(tails.get(i).wait)
+                {
+                    tails.get(i).setWait(false);
+                }else{
+                    tails.get(i).setX(tails.get(i-1).getX());
+                    tails.get(i).setY(tails.get(i-1).getY());
+                }
+            }
+        }
 
+        if(tails.size() >= 1) {
+            if (tails.get(0).wait) {
+                tails.get(0).setWait(false);
+            } else {
+                tails.get(0).setX(head.getX());
+                tails.get(0).setY(head.getY());
+            }
+        }
+        switch(head.getDir())
+        {
+            case RIGHT:
+                head.setX(head.getX() + 1);
+                break;
+            case DOWN:
+                head.setY(head.getY() + 1);
+                break;
+            case LEFT:
+                head.setX(head.getX() - 1);
+                break;
+            case UP:
+                head.setY(head.getY() - 1);
+                break;
+        }
     }
     //Positon to Coordinate
     public static Point ptc(int x, int y)

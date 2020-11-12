@@ -1,4 +1,6 @@
 package Action;
 
-public class Collision {
+public class Collision
+{
+
 }

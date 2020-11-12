@@ -1,6 +1,7 @@
 package Action;
 
 import clocks.GameCLock;
+import game.Tail;
 import gui.Gui;
 
 public class Main
