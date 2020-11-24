@@ -54,7 +54,7 @@ public class Draw extends JLabel
             g.fillRect(p.x, p.y, 32 ,32);
         }
 
-        g.setColor(new Color(9, 85, 11));
+        g.setColor(rgb);
         p = Snake.ptc(Snake.head.getX(), Snake.head.getY());
         g.fillRect(p.x, p.y, 32 ,32);
 

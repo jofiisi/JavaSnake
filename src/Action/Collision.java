@@ -2,6 +2,9 @@ package Action;
 
 import game.PickUp;
 import game.Snake;
+import java.io.IOException;
+import java.io.File;
+import java.util.Scanner;
 
 public class Collision
 {
@@ -20,6 +23,7 @@ public class Collision
         return (Snake.head.getX()<0 || Snake.head.getX() >15 ||Snake.head.getY()<0 || Snake.head.getY() >15);
     }
 
+
     public static void collidePickUp()
     {
         if(Snake.head.getX() == Snake.pickUp.getX() && Snake.head.getY() == Snake.pickUp.getY())
@@ -27,10 +31,11 @@ public class Collision
             Snake.pickUp.reset();
             Snake.addTail();
             Snake.score++;
-            if(Snake.score > Snake.bestscore)
-            {
-                Snake.bestscore = Snake.score;
-            }
+
+                if (Snake.score > Snake.bestscore)
+                {
+                    Snake.bestscore = Snake.score;
+                }
         }
     }
 }
