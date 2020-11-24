@@ -13,7 +13,6 @@ public class Head
 
     public Dir getDir()
     {
-
         return dir;
     }
 

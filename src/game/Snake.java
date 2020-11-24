@@ -8,9 +8,10 @@ public class Snake
 {
     public static boolean waitToMove = false;
 
+    public static int score = 0, bestscore = 0;
     public static Head head = new Head(7, 7);
     public static ArrayList<Tail> tails = new ArrayList<>();
-
+    public static PickUp pickUp = new PickUp();
     public  static void  addTail()
     {
         if(tails.size() < 1)
@@ -24,6 +25,7 @@ public class Snake
     {
         if(tails.size() >= 2)
         {
+
             for(int i = tails.size()-1; i >=1;i--)
             {
                 if(tails.get(i).wait)
