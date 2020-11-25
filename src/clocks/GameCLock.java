@@ -1,6 +1,7 @@
 package clocks;
 
 import Action.Collision;
+import Action.Main;
 import game.Snake;
 
 import java.io.File;
@@ -13,13 +14,14 @@ public class GameCLock extends Thread
 {
     public static boolean running = true;
     public static String scoreF;
+    File score = new File("Score.txt");
     public void run()
     {
 
         while(running)
         {
             try {
-                File score = new File("Score.txt");
+                score.createNewFile();
                 Scanner scoreR = new Scanner(score);
                 while (scoreR.hasNextLine())
                 {
@@ -27,7 +29,6 @@ public class GameCLock extends Thread
                     Snake.bestscore = Integer.valueOf(scoreS);
                 }
                 scoreR.close();
-
                 sleep(200);
                 Snake.move();
                 Snake.waitToMove = false;

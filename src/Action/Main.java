@@ -1,10 +1,9 @@
 package Action;
 
 import clocks.GameCLock;
-import game.Snake;
-import game.Tail;
 import gui.Gui;
 
+import java.io.File;
 import java.io.IOException;
 
 
